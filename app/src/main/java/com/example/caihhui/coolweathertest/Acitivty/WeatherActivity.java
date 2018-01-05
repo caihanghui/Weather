@@ -123,6 +123,7 @@ public class WeatherActivity extends AppCompatActivity {
         mSwipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
+                //下拉刷新更新天气
                 requestWeather(weather_id);
             }
         });
@@ -184,6 +185,8 @@ public class WeatherActivity extends AppCompatActivity {
                             editor.apply();
                             weather_id = weather.basic.weatherId;
                             showWeatherInfo(weather);
+                            Toast.makeText(WeatherActivity.this, "获取天气信息成功", Toast.LENGTH_SHORT).show();
+
                         } else {
                             Toast.makeText(WeatherActivity.this, "获取天气信息失败", Toast.LENGTH_SHORT).show();
                         }
