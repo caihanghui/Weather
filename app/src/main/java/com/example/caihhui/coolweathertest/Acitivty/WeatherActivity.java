@@ -91,11 +91,12 @@ public class WeatherActivity extends AppCompatActivity {
         weather_info_text = (TextView) findViewById(R.id.weather_info_text);
         mWeatherLayout = (ScrollView) findViewById(R.id.weather_layout);
         mBindPicImg = findViewById(R.id.bind_pic_img);
-        mSwipeRefresh = findViewById(R.id.swipe_refresh);
-        mSwipeRefresh.setColorSchemeResources(R.color.colorPrimary);
+
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mNavButton = (Button) findViewById(R.id.nav_button);
-
+        mSwipeRefresh = findViewById(R.id.swipe_refresh);
+        //设置下拉进度条的颜色主题
+        mSwipeRefresh.setColorSchemeResources(R.color.colorPrimary);
 
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
 
